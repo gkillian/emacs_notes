@@ -1,0 +1,14 @@
+C-M-n, C-M-p: move by group of balanced brackets
+Ctrl-Meta-n and Ctrl-Meta-p moves the cursor across one balanced set of brackets. If the cursor is to the left of or on top of an opening bracket, then C-M-n will move to one character beyond the closing bracket. The reverse happens for C-M-p when the cursor is to the right of (but not on top of) a closing bracket.
+
+Note the difference from Vim! Emacs makes more sense semantically — where you next type will always be at the same nesting level as before the key was hit — but Vim wins in terms of human visual cognition — the matching bracket is highlighted by the cursor. Also, Vim makes it easy to jump back by simply hitting % twice.
+
+Emacs's choice isn't all bad, though. By staying at the same level in the parenthetical structure, it is easy to walk through nested code as a tree since hitting the same key repeatedly visits the next sibling node. (Try this with a large JSON file.)
+
+C-M-f, C-M-b: move by balanced "sexp"
+Ctrl-Meta-f and Ctrl-Meta-b moves the cursor across a programming expression. This isn't just for brackets, it also leaps over other clumpable units, like numbers or identifiers. Unless you are programming in Lisp, there is little reason to use this instead of C-M-n and C-M-p.
+
+C-M-d, C-M-u: move down and up in nesting depth
+Ctrl-Meta-d moves the cursor forward, just after the next opening bracket (one level deeper). Ctrl-Meta-u moves the cursor backwards, landing on top of the first prior opening bracket (one level up in the tree structure). Note that when the cursor is on an opening bracket, it is technically outside of the nest as anything you type will be inserted before the bracket. Conversely, when the cursor is on a closing bracket, it is inside.
+
+Again, this is more useful for navigating tree structured code and data than simply matching brackets. However, I do note that someone else's answer here actually recommends using C-M-u in combination with C-M-n, presumably because both of those can be used when the cursor is directly on top of a bracket, as in Vim. However, they are not inverses of each other and using one after the other will not return you to where you started.
