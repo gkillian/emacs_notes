@@ -1,0 +1,11 @@
+# insert contents of a file
+C-x i : insert file
+
+# toggle read-only mode off/on
+C-X C-q
+
+# save a file
+C-X C-s : save file
+
+# close all other windows
+C-x 1 :  close all but one
