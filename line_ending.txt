@@ -1,3 +1,7 @@
+;; set fileformat to dos
+C-x RET f dos RET
+
+;; functions for .emacs file
 (defun dos2unix ()
   "Convert a DOS formatted text buffer to UNIX format"
   (interactive)
