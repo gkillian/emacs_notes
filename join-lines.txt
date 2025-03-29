@@ -1,0 +1,12 @@
+Joining lines :  M-^
+
+Multiple Cursors combined with M-^ will collapse all selected
+lines into one with all extraneous white-space removed.
+
+For example to select an entire buffer, invoke multiple cursors
+mode, collapse into one line, and then disable multiple cursors mode:
+
+C-x h
+M-x mc/edit-lines
+M-^
+C-g
