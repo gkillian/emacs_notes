@@ -1,0 +1,35 @@
+;; inhibit splash screen
+(setq inhibit-splash-screen t)
+
+;; change the font
+;; (set-face-attribute 'default nil :font "Cousine-16")
+(set-face-attribute 'default nil :font "Hack-16")
+
+;; maximize screen on startup
+;; (add-hook 'window-setup-hook 'toggle-frame-maximized t)
+;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; start the initial frame maximized
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+
+;; disabled menu on startup
+(menu-bar-mode -1)
+
+;; disable tools on startup
+(tool-bar-mode -1)
+
+;; disabled scroll bar on startup
+(scroll-bar-mode -1)
+
+;; eval buffer
+;; M-x eval-buffer
+
+;; set default font manually
+;; M-x customize-face
+
+;; set "gnu" style indenting for C
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+;; turn on electric pair mode
+(electric-pair-mode 1)
