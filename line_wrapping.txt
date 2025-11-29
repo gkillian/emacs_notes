@@ -1,0 +1,14 @@
+# soft line wrapping (on the screen)
+Visual (soft) wrapping — recommended for reading and editing prose
+Per buffer: M-x visual-line-mode RET
+Globally: M-x global-visual-line-mode RET
+This wraps long lines on the screen at word boundaries without inserting newlines. It also makes vertical motion work visually (line-move-visual).
+
+# truncate line (visually)
+
+To stop Emacs from wrapping long lines on the screen, enable truncation (no visual wrap) with: M-x toggle-truncate-lines or set it permanently: (setq-default truncate-lines t)
+Also make sure visual-line-mode and auto-fill-mode (which wrap text) are off:
+M-x visual-line-mode ; toggle off in current buffer
+M-x global-visual-line-mode ; toggle off globally
+M-x auto-fill-mode ; turn off hard wrapping in current buffer
+M-x global-auto-fill-mode ; turn off global auto-fill
