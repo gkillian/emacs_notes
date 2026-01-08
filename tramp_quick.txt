@@ -1,0 +1,11 @@
+In Emacs, do C-x C-f.
+Enter a TRAMP multi-hop filename like /ssh:youruser@remote.example.com|sudo:root:/etc/hosts
+Press RET. Emacs will prompt for your SSH password/key and then for the sudo password on the remote host. Edit and save normally (C-x C-s).
+
+Notes, variants and tips
+
+Syntax: /method:user@host|method2:user2@host2:/path. When the second hop is sudo/su you usually omit the @host there because it runs on the already-SSH’ed machine; e.g. /ssh:user@host|sudo:root:/path.
+If your local and remote usernames are the same you can omit user@host: /ssh:host|sudo:root:/path.
+If you prefer to use su instead of sudo: /ssh:host|su:root:/path (you will be prompted for root’s password).
+To edit a local file as root: C-x C-f /sudo:root@localhost:/etc/hosts (or /sudo:root:/etc/hosts depending on TRAMP version).
+If you want passwordless operation: use SSH keys for the SSH hop and configure sudoers (NOPASSWD) for the specific commands you need (be careful with security).
