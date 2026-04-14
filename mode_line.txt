@@ -1,0 +1,5 @@
+Characters     Meaning
+--             Buffer has not been modified
+**             Butter has been modified (not yet saved)
+%%             Read-only mode:  buffer has not been modified
+%*             Read-only mode:  buffer has been modified
