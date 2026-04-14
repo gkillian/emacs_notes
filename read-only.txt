@@ -1,0 +1,6 @@
+C-x C-q     toggle read-only mode
+
+C-x C-r	    open file in read only mode
+
+OLD emacs:  emacs "$1" --eval '(setq buffer-read-only t)'
+NEW emacs:  emacs "$1" -f read-only-mode
