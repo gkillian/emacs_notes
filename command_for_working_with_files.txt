@@ -1,0 +1,9 @@
+Command        Description
+C-x C-f	       Switch to buffer containing specified file
+C-x C-v	       Replace buffer contents with specified file
+C-x C-s	       Save a buffer to file
+C-x C-w	       Save a buffer to specified file
+C-x i	       Insert contents of a file into buffer
+C-x 4 C-f      Read contents of file into next window
+C-x 4 f	       same as C-x 4 C-f
+C-x 4 r	       same as C-x 4 C-f
