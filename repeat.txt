@@ -1,0 +1,8 @@
+Prefix         Effect
+M-number       repeat command specified number of times
+ESC number     repeat command specified number of time
+C-u number     repeat command specified number of times
+C-u 	       repeat command 4 times
+C-u C-u	       repeat comand 16 times
+C-u C-u C-u    repeat command 64 times
+C-uC-uC-uC-u   repeat command 25 times
