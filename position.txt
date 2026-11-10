@@ -1,0 +1,4 @@
+M-g c    go to position in file
+C-x =    show position in file
+
+NOTE:  postion is the number of chars from begining of file
